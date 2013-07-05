@@ -1,0 +1,11 @@
+This is my first project with a MSP430. It uses a MSP430G2553 to make a tea timer (or cake timer or whatever that needs baking timer...) in form a a raving rabbit that screams when the countdown reaches 0. 
+
+[img]http://mbonnin.net/wp-content/uploads/2011/09/IMG_1761_expliquee-1024x768.jpg[/img]
+
+The sound is output using PWM and stored inside the internal flash. It is 8kHz/8 bit and lasts for a bit less than 2 seconds to keep some space for the program code. The display is a 1 line LCD character display.
+
+[img]http://mbonnin.net/wp-content/uploads/2011/09/IMG_1936-1024x768.jpg[/img]
+
+The timer is powered by 4 x LR44 batteries so that the board can fit inside a small form factor. The time is set using 2 buttons and the countdown starts as soon as a button is released. When idle, the MSP is in LPM4 and consumes almost nothing. When screaming on the other hand, the PCB eats 80mA, so I am not sure how long the batteries will last. I have found it quite difficult to have a decent audio output level with these little batteries so I might try something else in the future (anyone tried LiPo ?)
+
+The source code and schematics are available here [url]http://mbonnin.net/wp-content/uploads/2011/09/timer.tar.gz[/url]

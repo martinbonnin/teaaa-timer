@@ -1,0 +1,2 @@
+sox bwaaa3.wav -e unsigned -r 8k -b 8 -c 1 bwaaa3.raw
+aplay -f U8 bwaaa3.raw

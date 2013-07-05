@@ -1,0 +1,2 @@
+sed -n '/^\s*[^\/]*,/ s/^\(\s*\)\([^,]*\),\([^,]*\),/\1MAKE_NOTE(\2,\3),/; p;' mario.h 
+cat mario.h | perl -e 'while (<>) {if (m/^([\s]*[^\/]*),([^,]*),[^,]*/){ my $var=$2 >> 0; while ($var > 8) {print "$1, 8, // <=== duplicate\n"; $var -= 8} print "$1, $var,\n";} else {print "$_"}}'
